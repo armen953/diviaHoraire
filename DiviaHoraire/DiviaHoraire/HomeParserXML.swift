@@ -65,19 +65,6 @@ class HomeParser: NSObject, XMLParserDelegate{
         task.resume()
     }
     
-//    var myData: Data = "".data(using: .ascii)!
-//
-//
-//    func setData(data: Data) -> Void {
-//        myData = data
-//    }
-//
-//    func parse() {
-//        let parser = XMLParser(data: myData)
-//        parser.delegate = self
-//        parser.parse()
-//    }
-//
     func parserDidEndDocument(_ parser: XMLParser) {
         print("end")
         parserCompletionHandler?(ligneItems)
