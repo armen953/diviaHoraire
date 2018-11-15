@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B66E925F219D7335000D1719 /* HomeParserXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E925E219D7335000D1719 /* HomeParserXML.swift */; };
 		B66FE3FE219B1CD7002CA082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FE3FD219B1CD7002CA082 /* AppDelegate.swift */; };
 		B66FE400219B1CD7002CA082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FE3FF219B1CD7002CA082 /* ViewController.swift */; };
 		B66FE403219B1CD7002CA082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66FE401219B1CD7002CA082 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B66E925E219D7335000D1719 /* HomeParserXML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParserXML.swift; sourceTree = "<group>"; };
 		B66FE3FA219B1CD7002CA082 /* DiviaHoraire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiviaHoraire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66FE3FD219B1CD7002CA082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B66FE3FF219B1CD7002CA082 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				B66FE409219B1CD7002CA082 /* LaunchScreen.storyboard */,
 				B66FE40C219B1CD7002CA082 /* Info.plist */,
 				B66FE404219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld */,
+				B66E925E219D7335000D1719 /* HomeParserXML.swift */,
 			);
 			path = DiviaHoraire;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66FE406219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld in Sources */,
+				B66E925F219D7335000D1719 /* HomeParserXML.swift in Sources */,
 				B66FE400219B1CD7002CA082 /* ViewController.swift in Sources */,
 				B66FE3FE219B1CD7002CA082 /* AppDelegate.swift in Sources */,
 			);
