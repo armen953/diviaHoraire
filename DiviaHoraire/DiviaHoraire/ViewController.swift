@@ -8,30 +8,37 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var homeTableView: UITableView!
     //https://www.youtube.com/watch?v=8IBFuBgM09A
     
     
     //https://www.youtube.com/watch?v=fP69LI5bZlg
     var urlLink: String = ""
-    
+    var identifier = "LigneCell"
     var ligneItems: [Ligne]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
         
         fetchData()
     }
 
     func fetchData() {
         let homeParser = HomeParser()
-        homeParser.parseFeed(url: "http://timeo3.keolis.com/relais/217.php?xml=1") {
-            (ligneItems) in
+        homeParser.parseFeed(url: "http://timeo3.keolis.com/relais/217.php?xml=1") { (ligneItems) in
             self.ligneItems = ligneItems
             
-            print(self.ligneItems!)
+            print(self.ligneItems!.count)
+            OperationQueue.main.addOperation {
+                self.homeTableView.reloadSections(IndexSet(integer: 0), with: .left)
+            }
+            
         }        // video 25:56
     }
     
@@ -39,8 +46,26 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // check if ligneItems exist
+        guard let ligneItems = ligneItems else {
+            return 0
+        }
+        return ligneItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as! LigneCell
+        if let ligne =  ligneItems?[indexPath.row] {
+            cell.ligneNameView.text = ligne.nom + " > " + ligne.vers
+        }
+        //cell.ligneNameView.text = "test" // ligne.nom
+        
+        return cell
+    }
+    
     
 }
 

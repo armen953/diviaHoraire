@@ -14,6 +14,7 @@
 		B66FE406219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B66FE404219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld */; };
 		B66FE408219B1CD7002CA082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66FE407219B1CD7002CA082 /* Assets.xcassets */; };
 		B66FE40B219B1CD7002CA082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66FE409219B1CD7002CA082 /* LaunchScreen.storyboard */; };
+		C0D0F978219DDE4E00EEB9F7 /* LigneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D0F977219DDE4D00EEB9F7 /* LigneCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B66FE407219B1CD7002CA082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B66FE40A219B1CD7002CA082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B66FE40C219B1CD7002CA082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0D0F977219DDE4D00EEB9F7 /* LigneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LigneCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B66FE40C219B1CD7002CA082 /* Info.plist */,
 				B66FE404219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld */,
 				B66E925E219D7335000D1719 /* HomeParserXML.swift */,
+				C0D0F977219DDE4D00EEB9F7 /* LigneCell.swift */,
 			);
 			path = DiviaHoraire;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66FE406219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld in Sources */,
+				C0D0F978219DDE4E00EEB9F7 /* LigneCell.swift in Sources */,
 				B66E925F219D7335000D1719 /* HomeParserXML.swift in Sources */,
 				B66FE400219B1CD7002CA082 /* ViewController.swift in Sources */,
 				B66FE3FE219B1CD7002CA082 /* AppDelegate.swift in Sources */,
