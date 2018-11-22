@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var homeTableView: UITableView!
     //https://www.youtube.com/watch?v=8IBFuBgM09A
@@ -16,14 +16,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //https://www.youtube.com/watch?v=fP69LI5bZlg
     var urlLink: String = ""
-    var identifier = "LigneCell"
+    let identifier = "LigneCell"
     var ligneItems: [Ligne]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-        homeTableView.delegate = self
         homeTableView.dataSource = self
         
         fetchData()
@@ -56,16 +55,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as! LigneCell
-        if let ligne =  ligneItems?[indexPath.row] {
-            cell.ligneNameView.text = ligne.nom + " > " + ligne.vers
-        }
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as! LigneCell
+            if let ligne =  ligneItems?[indexPath.row] {
+                cell.ligneNameView.text = ligne.nom + " > " + ligne.vers
+            }
         //cell.ligneNameView.text = "test" // ligne.nom
         
         return cell
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showArrets" {
+            let vc = segue.destination as! ArretsViewController
+            let indexPath = homeTableView.indexPathForSelectedRow!
+            let row = indexPath.row
+            
+            vc.ligneId = ligneItems![row].code
+            vc.sense = ligneItems![row].sens
+            vc.tempTitlename = ligneItems![row].nom + " > " + ligneItems![row].vers
+        
+        }
+        
+    }
 }
 

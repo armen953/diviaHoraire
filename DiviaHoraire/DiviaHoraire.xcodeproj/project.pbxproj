@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B64F3B4A21A693730010C77D /* ArretsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F3B4921A693730010C77D /* ArretsViewController.swift */; };
+		B64F3B4C21A696580010C77D /* ArretsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F3B4B21A696580010C77D /* ArretsCell.swift */; };
+		B64F3B5021A69BDF0010C77D /* ArretsParserXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F3B4F21A69BDF0010C77D /* ArretsParserXML.swift */; };
 		B66E925F219D7335000D1719 /* HomeParserXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E925E219D7335000D1719 /* HomeParserXML.swift */; };
 		B66FE3FE219B1CD7002CA082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FE3FD219B1CD7002CA082 /* AppDelegate.swift */; };
 		B66FE400219B1CD7002CA082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FE3FF219B1CD7002CA082 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B64F3B4921A693730010C77D /* ArretsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArretsViewController.swift; sourceTree = "<group>"; };
+		B64F3B4B21A696580010C77D /* ArretsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArretsCell.swift; sourceTree = "<group>"; };
+		B64F3B4F21A69BDF0010C77D /* ArretsParserXML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArretsParserXML.swift; sourceTree = "<group>"; };
 		B66E925E219D7335000D1719 /* HomeParserXML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParserXML.swift; sourceTree = "<group>"; };
 		B66FE3FA219B1CD7002CA082 /* DiviaHoraire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiviaHoraire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66FE3FD219B1CD7002CA082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B64F3B4E21A699D00010C77D /* Arret */ = {
+			isa = PBXGroup;
+			children = (
+				B64F3B4921A693730010C77D /* ArretsViewController.swift */,
+				B64F3B4B21A696580010C77D /* ArretsCell.swift */,
+				B64F3B4F21A69BDF0010C77D /* ArretsParserXML.swift */,
+			);
+			name = Arret;
+			sourceTree = "<group>";
+		};
 		B66FE3F1219B1CD7002CA082 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +76,7 @@
 		B66FE3FC219B1CD7002CA082 /* DiviaHoraire */ = {
 			isa = PBXGroup;
 			children = (
+				B64F3B4E21A699D00010C77D /* Arret */,
 				B66FE3FD219B1CD7002CA082 /* AppDelegate.swift */,
 				B66FE3FF219B1CD7002CA082 /* ViewController.swift */,
 				B66FE401219B1CD7002CA082 /* Main.storyboard */,
@@ -145,10 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66FE406219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld in Sources */,
+				B64F3B4A21A693730010C77D /* ArretsViewController.swift in Sources */,
 				C0D0F978219DDE4E00EEB9F7 /* LigneCell.swift in Sources */,
+				B64F3B4C21A696580010C77D /* ArretsCell.swift in Sources */,
 				B66E925F219D7335000D1719 /* HomeParserXML.swift in Sources */,
 				B66FE400219B1CD7002CA082 /* ViewController.swift in Sources */,
 				B66FE3FE219B1CD7002CA082 /* AppDelegate.swift in Sources */,
+				B64F3B5021A69BDF0010C77D /* ArretsParserXML.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
