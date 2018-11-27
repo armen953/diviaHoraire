@@ -103,6 +103,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="arretName" destination="Xkp-th-p2M" id="oK0-86-PnC"/>
+                                            <segue destination="DQP-IQ-qee" kind="show" identifier="showHoraire" id="xmu-cZ-hkZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -125,7 +126,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOh-iW-ATt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2170" y="-672"/>
+            <point key="canvasLocation" x="2050" y="-672"/>
+        </scene>
+        <!--Horaire View Controller-->
+        <scene sceneID="GKH-qA-95B">
+            <objects>
+                <viewController id="DQP-IQ-qee" customClass="HoraireViewController" customModule="DiviaHoraire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eqT-oP-EOj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="p6n-iQ-27l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rWC-V0-0Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3094" y="-672"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pgx-D5-TKF">

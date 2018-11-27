@@ -15,6 +15,7 @@ class ArretsViewController: UIViewController, UITableViewDataSource {
     var sense = String()
     let identifier = "ArretCell"
     
+   
     var arretsItems: [Arret]?
     
     var tempTitlename = String()
@@ -61,5 +62,18 @@ class ArretsViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showHoraire" {
+            let vc = segue.destination as! HoraireViewController
+            let indexPath = arretsTableView.indexPathForSelectedRow!
+            let row = indexPath.row
+            print(arretsItems![row].refs)
+            vc.refs = arretsItems![row].refs
+            vc.code = arretsItems![row].code
+            vc.nom = arretsItems![row].nom
+            
+        }
+    }
     
 }

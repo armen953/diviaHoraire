@@ -18,6 +18,7 @@ class ArretParser: NSObject, XMLParserDelegate {
     
     var arretsItems: [Arret] = []
     private var currentElement = ""
+    private var isArret = false
     
     private var currentCode: String = "" {
         didSet {
@@ -75,23 +76,26 @@ class ArretParser: NSObject, XMLParserDelegate {
             currentCode = ""
             currentRefs = ""
         }
-        print(elementName)
+        if elementName == "arret" || elementName == "refs" {
+            isArret = true
+        }
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        switch currentElement {
+        if isArret {
+            switch currentElement {
             case "code": currentCode += string
             case "nom": currentNom += string
             case "refs": currentRefs += string
             default: break
+            }
         }
-       print(currentElement)
-        
-        
-        
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        if elementName == "arret" || elementName == "refs"  {
+            isArret = false
+        }
         if elementName == "als"  {
             let arretItem = Arret(code: currentCode, nom: currentNom, refs: currentRefs)
             self.arretsItems.append(arretItem)

@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     let identifier = "LigneCell"
     var ligneItems: [Ligne]?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,12 +34,13 @@ class ViewController: UIViewController, UITableViewDataSource {
         homeParser.parseFeed(url: "http://timeo3.keolis.com/relais/217.php?xml=1") { (ligneItems) in
             self.ligneItems = ligneItems
             
-            print(self.ligneItems!.count)
+            print(ligneItems)
+            
             OperationQueue.main.addOperation {
                 self.homeTableView.reloadSections(IndexSet(integer: 0), with: .left)
             }
             
-        }        // video 25:56
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,7 +78,6 @@ class ViewController: UIViewController, UITableViewDataSource {
             vc.tempTitlename = ligneItems![row].nom + " > " + ligneItems![row].vers
         
         }
-        
     }
 }
 

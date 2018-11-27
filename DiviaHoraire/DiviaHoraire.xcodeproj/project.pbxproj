@@ -10,6 +10,7 @@
 		B64F3B4A21A693730010C77D /* ArretsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F3B4921A693730010C77D /* ArretsViewController.swift */; };
 		B64F3B4C21A696580010C77D /* ArretsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F3B4B21A696580010C77D /* ArretsCell.swift */; };
 		B64F3B5021A69BDF0010C77D /* ArretsParserXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F3B4F21A69BDF0010C77D /* ArretsParserXML.swift */; };
+		B65512D221AD99E600A87E7D /* HoraireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65512D121AD99E600A87E7D /* HoraireViewController.swift */; };
 		B66E925F219D7335000D1719 /* HomeParserXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E925E219D7335000D1719 /* HomeParserXML.swift */; };
 		B66FE3FE219B1CD7002CA082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FE3FD219B1CD7002CA082 /* AppDelegate.swift */; };
 		B66FE400219B1CD7002CA082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FE3FF219B1CD7002CA082 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 		B66FE406219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B66FE404219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld */; };
 		B66FE408219B1CD7002CA082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66FE407219B1CD7002CA082 /* Assets.xcassets */; };
 		B66FE40B219B1CD7002CA082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66FE409219B1CD7002CA082 /* LaunchScreen.storyboard */; };
+		B6F2863421ADA1BE0082E2DD /* HoraireParserXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2863321ADA1BE0082E2DD /* HoraireParserXML.swift */; };
 		C0D0F978219DDE4E00EEB9F7 /* LigneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D0F977219DDE4D00EEB9F7 /* LigneCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,7 @@
 		B64F3B4921A693730010C77D /* ArretsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArretsViewController.swift; sourceTree = "<group>"; };
 		B64F3B4B21A696580010C77D /* ArretsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArretsCell.swift; sourceTree = "<group>"; };
 		B64F3B4F21A69BDF0010C77D /* ArretsParserXML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArretsParserXML.swift; sourceTree = "<group>"; };
+		B65512D121AD99E600A87E7D /* HoraireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoraireViewController.swift; sourceTree = "<group>"; };
 		B66E925E219D7335000D1719 /* HomeParserXML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParserXML.swift; sourceTree = "<group>"; };
 		B66FE3FA219B1CD7002CA082 /* DiviaHoraire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiviaHoraire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66FE3FD219B1CD7002CA082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		B66FE407219B1CD7002CA082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B66FE40A219B1CD7002CA082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B66FE40C219B1CD7002CA082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F2863321ADA1BE0082E2DD /* HoraireParserXML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoraireParserXML.swift; sourceTree = "<group>"; };
 		C0D0F977219DDE4D00EEB9F7 /* LigneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LigneCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +61,15 @@
 			name = Arret;
 			sourceTree = "<group>";
 		};
+		B65512D021AD983900A87E7D /* Horaire */ = {
+			isa = PBXGroup;
+			children = (
+				B65512D121AD99E600A87E7D /* HoraireViewController.swift */,
+				B6F2863321ADA1BE0082E2DD /* HoraireParserXML.swift */,
+			);
+			name = Horaire;
+			sourceTree = "<group>";
+		};
 		B66FE3F1219B1CD7002CA082 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +89,7 @@
 		B66FE3FC219B1CD7002CA082 /* DiviaHoraire */ = {
 			isa = PBXGroup;
 			children = (
+				B65512D021AD983900A87E7D /* Horaire */,
 				B64F3B4E21A699D00010C77D /* Arret */,
 				B66FE3FD219B1CD7002CA082 /* AppDelegate.swift */,
 				B66FE3FF219B1CD7002CA082 /* ViewController.swift */,
@@ -164,11 +178,13 @@
 				B66FE406219B1CD7002CA082 /* DiviaHoraire.xcdatamodeld in Sources */,
 				B64F3B4A21A693730010C77D /* ArretsViewController.swift in Sources */,
 				C0D0F978219DDE4E00EEB9F7 /* LigneCell.swift in Sources */,
+				B6F2863421ADA1BE0082E2DD /* HoraireParserXML.swift in Sources */,
 				B64F3B4C21A696580010C77D /* ArretsCell.swift in Sources */,
 				B66E925F219D7335000D1719 /* HomeParserXML.swift in Sources */,
 				B66FE400219B1CD7002CA082 /* ViewController.swift in Sources */,
 				B66FE3FE219B1CD7002CA082 /* AppDelegate.swift in Sources */,
 				B64F3B5021A69BDF0010C77D /* ArretsParserXML.swift in Sources */,
+				B65512D221AD99E600A87E7D /* HoraireViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
