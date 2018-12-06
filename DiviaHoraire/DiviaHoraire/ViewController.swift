@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         homeParser.parseFeed(url: "http://timeo3.keolis.com/relais/217.php?xml=1") { (ligneItems) in
             self.ligneItems = ligneItems
             
-            print(ligneItems)
+            // print(ligneItems)
             
             OperationQueue.main.addOperation {
                 self.homeTableView.reloadSections(IndexSet(integer: 0), with: .left)

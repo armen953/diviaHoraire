@@ -84,10 +84,10 @@ class ArretParser: NSObject, XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         if isArret {
             switch currentElement {
-            case "code": currentCode += string
-            case "nom": currentNom += string
-            case "refs": currentRefs += string
-            default: break
+                case "code": currentCode += string
+                case "nom": currentNom += string
+                case "refs": currentRefs += string
+                default: break
             }
         }
     }

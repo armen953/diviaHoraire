@@ -72,7 +72,7 @@ class ArretsViewController: UIViewController, UITableViewDataSource {
             vc.refs = arretsItems![row].refs
             vc.code = arretsItems![row].code
             vc.nom = arretsItems![row].nom
-            
+            vc.ligne = ligneId
         }
     }
     
