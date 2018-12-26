@@ -21,20 +21,20 @@ class HoraireViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        print(refs)
-//        print(code)
-//        print(nom)
-//        print(ligne)
+        //print(refs)
+        //print(code)
+        print(nom)
+        print(ligne)
         fetchData()
         // http://timeo3.keolis.com/relais/217.php?xml=3&ran=1&refs=274433027|274433539|274434307
     }
     
     func fetchData() {
         let horaireParser = HoraireParser()
-        horaireParser.parseFeed(url: "http://timeo3.keolis.com/relais/217.php?xml=3&ran=1&refs=\(code)")
+        horaireParser.parseFeed(url: "http://timeo3.keolis.com/relais/217.php?xml=3&ran=1&refs=\(refs)")
         { (horairesItems) in
             self.horairesItems = horairesItems
-            print(self.horairesItems)
+            //print(self.horairesItems!)
             OperationQueue.main.addOperation {
                 //self.arretsTableView.reloadSections(IndexSet(integer: 0), with: .left)
             }

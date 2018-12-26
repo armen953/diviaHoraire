@@ -68,7 +68,7 @@ class ArretsViewController: UIViewController, UITableViewDataSource {
             let vc = segue.destination as! HoraireViewController
             let indexPath = arretsTableView.indexPathForSelectedRow!
             let row = indexPath.row
-            print(arretsItems![row].refs)
+            //print(arretsItems![row].refs)
             vc.refs = arretsItems![row].refs
             vc.code = arretsItems![row].code
             vc.nom = arretsItems![row].nom

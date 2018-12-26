@@ -35,8 +35,9 @@ class HoraireParser: NSObject, XMLParserDelegate {
     
     func parseFeed(url: String, completionHandler: (([Horaire]) -> Void)?){
         self.parserCompletionHandler = completionHandler
-        
-        let request = URLRequest(url: URL(string: url)!)
+        let newUrl = url.replacingOccurrences(of: "|", with: "%7C")
+        // print(URL(string: newUrl)!)
+        let request = URLRequest(url: URL(string: newUrl)!)
         let urlSession = URLSession.shared
         let task = urlSession.dataTask(with: request) { (data, response, error) in
             guard let data = data else {
@@ -59,11 +60,12 @@ class HoraireParser: NSObject, XMLParserDelegate {
     
     func parserDidEndDocument(_ parser: XMLParser) {
         print("end")
+        parserCompletionHandler?(horaireItems)
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         currentElement = elementName
-        print(elementName)
+        // print(elementName)
         if currentElement == "passage" {
             currentDuree = ""
             currentDestination = ""
@@ -73,15 +75,16 @@ class HoraireParser: NSObject, XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         switch currentElement {
             case "duree": currentDuree += string
-            case "destination": currentDuree += string
+            case "destination": currentDestination += string
             default: break
         }
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        let horaireItem = Horaire(duree: currentDuree, destination: currentDestination)
-        self.horaireItems.append(horaireItem)
-        //print(horaireItem)
+        if elementName == "passage" {
+            let horaireItem = Horaire(duree: currentDuree, destination: currentDestination)
+            self.horaireItems.append(horaireItem)
+        }
     }
     
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
