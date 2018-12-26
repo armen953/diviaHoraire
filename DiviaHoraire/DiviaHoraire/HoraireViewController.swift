@@ -51,6 +51,7 @@ class HoraireViewController: UIViewController {
                 } else {
                     if self.horairesItems!.count == 1 {
                         self.passage1Label.text = self.horairesItems![0].duree
+                        self.setPassage2ToNull()
                     }else if self.horairesItems!.count == 2 {
                         self.passage1Label.text = self.horairesItems![0].duree
                         self.passage2Label.text = self.horairesItems![1].duree
